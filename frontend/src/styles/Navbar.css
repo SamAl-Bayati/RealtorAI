@@ -1,0 +1,186 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.navbar-content {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 100%;
+  margin: 0;
+}
+
+.navbar-brand {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #1a1a1a; /* Changed to black */
+  text-decoration: none;
+  margin-right: auto;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-right: 1.5rem;
+}
+
+.nav-links a {
+  color: #333;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.nav-links a:hover {
+  color: rgb(0, 102, 255); /* Keeping hover effect blue */
+}
+
+.profile-dropdown {
+  position: relative;
+  margin-left: 2rem;
+}
+
+.profile-button {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  border: none;
+  background: none;
+  cursor: pointer;
+  color: #333;
+  font-weight: 500;
+}
+
+.user-menu {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.user-menu-button {
+  background: none;
+  border: none;
+  color: #1a1a1a;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 8px 12px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+  max-width: 200px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-weight: 500;
+}
+
+.user-menu-button:hover {
+  background-color: rgba(255, 99, 71, 0.1);
+  color: #2D3748;
+}
+
+.user-name {
+  font-weight: 500;
+  max-width: 150px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.dropdown-arrow {
+  font-size: 12px;
+  opacity: 0.7;
+  transition: transform 0.3s ease;
+}
+
+.user-menu-button:hover .dropdown-arrow {
+  transform: translateY(2px);
+  opacity: 1;
+}
+
+.user-dropdown {
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(45, 55, 72, 0.18);
+  min-width: 180px;
+  border: 1px solid rgba(226, 232, 240, 0.8);
+  overflow: hidden;
+  transform-origin: top center;
+  animation: dropdownFadeIn 0.25s ease;
+  z-index: 100;
+}
+
+@keyframes dropdownFadeIn {
+  from { 
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to { 
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.user-dropdown button {
+  width: 100%;
+  padding: 14px 20px;
+  text-align: left;
+  border: none;
+  background: none;
+  cursor: pointer;
+  color: #2D3748;
+  font-size: 15px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.user-dropdown button:hover {
+  background-color: rgba(255, 99, 71, 0.1);
+  color: #1A202C;
+  padding-left: 24px;
+}
+
+.user-dropdown button:active {
+  background-color: rgba(45, 55, 72, 0.1);
+}
+
+@media (max-width: 768px) {
+  .navbar-content {
+    padding: 0 1rem;
+  }
+  
+  .nav-links {
+    gap: 1rem;
+    margin-right: 1rem;
+  }
+  
+  .profile-dropdown {
+    margin-left: 1rem;
+  }
+  
+  .nav-links a {
+    font-size: 16px;
+  }
+  
+  .user-name {
+    max-width: 100px;
+  }
+}
+
+/* Add this in the head of your HTML to import the font */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap'); 
